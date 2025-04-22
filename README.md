@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# 🐍 Retro Snake Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A nostalgic browser-based Snake game built with **React** and **TypeScript**. Inspired by the classic Nokia-era Snake, complete with score tracking and clean pixel grid visuals.
 
-Currently, two official plugins are available:
+Live Demo: [https://snake-retro.vercel.app](https://snake-retro.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Arrow key controls (Up, Down, Left, Right)
+- Grid-based snake rendering using CSS blocks
+- Score tracking
+- Persistent high score using `localStorage`
+- Game over detection with restart option
+- Responsive and retro aesthetic
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## Tech Stack
+
+- React + TypeScript
+- Vite for dev & build tooling
+- LocalStorage for high score
+- CSS grid layout for game visuals
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/your-username/snake-game.git
+cd snake-game
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Screenshots
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+| Gameplay | Game Over |
+|----------|-----------|
+| ![Gameplay](gameplay.png) | ![Game Over](gameover.png) |
+
+---
+
+## Customization Ideas
+
+- Add boot animation or loading screen
+- Add audio: eat sound, crash beep
+- Snake themes (dark mode, neon, emoji-mode)
+- Timer-based survival mode
+
+---
+
+## License
+
+MIT License
+
+---
+
+Made with ❤️ by [@heyshiks](https://github.com/heyshiks)
